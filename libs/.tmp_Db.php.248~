@@ -1,0 +1,11 @@
+<?php
+   class Db
+   {
+   	public $mysql;
+	
+	function __construct()
+	{
+		$this->mysql = new mysqli('12.43.245.119', 'web3u1', '!e418b8!', 'web3db1') or die ('FAIL!');
+	}
+   }
+?>

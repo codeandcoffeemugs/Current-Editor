@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Current Titles</title>
+	<link rel="stylesheet" href="css/default.css" />
+	<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
+	<script type="text/javascript" src="libs/js/currentTitles.js"></script>
+	<style type="text/css">
+		
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<?php echo $header_message; ?>
+		<ul id="nav">
+			<li><a href="index.php">Home</a></li>
+			<li><a href="addTitle.php">Add a Course</a></li>
+			<li><a href="addAuthor.php">Add an Author</a></li>
+			<li><a href="addEditor.php">Add an Editor</a></li>
+		</ul>
+		<div style="clear:both;"></div>

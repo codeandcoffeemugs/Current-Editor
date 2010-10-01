@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Current Titles</title>
+	<link rel="stylesheet" href="css/default.css" />
+	<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('h4').click(function(){
+				$(this).hide('fast').next('input').show();
+			});
+			$('#item input').change(function(){
+				var id = $(this).prev('h4').attr('id');
+				var stage = $(this).val();
+				var thisParam = $(this);
+				
+				//alert(id + " " + stage);
+				$.ajax({
+					url: 'changeTitleStage.php',
+					data: 'id=' + id + '&stage=' + stage,
+					type: 'post',
+					
+					success: function(res){
+						$(thisParam).prev('h4').text('Stage: ' + stage);
+						$(thisParam).hide().prev('h4').show();
+					}
+				});
+			});
+		});
+	</script>
+	<style type="text/css">
+		
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<?php echo $header_message; ?>
